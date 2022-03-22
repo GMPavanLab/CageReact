@@ -2,7 +2,7 @@
 
 This repository contains the set of data shown in the paper "Reconstructing Reactivity in Dynamic Host-Guest Systems at Atomistic Resolution: Amide Hydrolysis Under Confinement in a Coordination Cage".
 
-All the input data needed to run the simulations and get the results are organized in 5 different folders:
+All the input data needed to run the simulations and get the results are organized in 3 different folders:
 
  * `1-Parametrization/`
 
