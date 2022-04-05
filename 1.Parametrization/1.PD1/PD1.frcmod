@@ -1,0 +1,67 @@
+Remark line goes here
+MASS
+nb 14.010        0.530
+ca 12.010        0.360
+h4 1.008         0.135
+ha 1.008         0.135
+cp 12.010        0.360
+
+BOND
+ca-nb  488.00   1.339
+cp-nb  488.50   1.339
+ca-h4  341.50   1.089
+ca-ca  461.10   1.398
+ca-ha  345.80   1.086
+ca-cp  450.20   1.406
+cp-cp  351.40   1.485
+
+ANGLE
+h4-ca-nb   51.900     116.030
+ca-ca-nb   68.800     122.940
+ca-cp-nb   69.000     121.620
+cp-cp-nb   68.200     116.610
+ca-nb-cp   68.100     118.050
+ca-ca-ha   48.200     119.880
+ca-ca-ca   66.600     120.020
+ca-ca-h4   48.100     120.340
+ca-ca-cp   66.300     120.690
+ca-cp-cp   64.000     121.110
+cp-ca-ha   48.000     119.860
+
+DIHE
+ha-ca-ca-nb   4   14.500       180.000           2.000
+ca-ca-ca-nb   4   14.500       180.000           2.000
+ca-ca-cp-nb   4   14.500       180.000           2.000
+ha-ca-cp-nb   4   14.500       180.000           2.000
+ca-cp-cp-nb   4    4.000       180.000           2.000
+nb-cp-cp-nb   4    4.000       180.000           2.000
+ca-cp-nb-ca   2    9.600       180.000           2.000      same as X -ca-nb-X , penalty score=418.5
+cp-cp-nb-ca   2    9.600       180.000           2.000      same as X -ca-nb-X , penalty score=418.5
+ca-ca-ca-ha   4   14.500       180.000           2.000
+ca-ca-ca-ca   4   14.500       180.000           2.000
+h4-ca-nb-cp   2    9.600       180.000           2.000
+h4-ca-ca-ha   4   14.500       180.000           2.000
+ca-ca-ca-h4   4   14.500       180.000           2.000
+ca-ca-nb-cp   2    9.600       180.000           2.000
+ca-ca-ca-cp   4   14.500       180.000           2.000
+ha-ca-ca-ha   4   14.500       180.000           2.000
+ca-ca-cp-cp   4   14.500       180.000           2.000
+cp-ca-ca-ha   4   14.500       180.000           2.000
+ca-cp-cp-ca   4    4.000       180.000           2.000
+ha-ca-cp-cp   4   14.500       180.000           2.000
+
+IMPROPER
+ca-h4-ca-nb         1.1          180.0         2.0          Using the default value
+ca-ca-ca-ha         1.1          180.0         2.0          Using general improper torsional angle  X- X-ca-ha, penalty score=  6.0)
+ca-cp-ca-ha         1.1          180.0         2.0          Using general improper torsional angle  X- X-ca-ha, penalty score=  6.0)
+ca-cp-cp-nb         1.1          180.0         2.0          Using the default value
+
+NONBON
+  nb          1.8240  0.1700
+  ca          1.9080  0.0860
+  h4          1.4090  0.0150
+  ha          1.4590  0.0150
+  cp          1.9080  0.0860
+
+
+

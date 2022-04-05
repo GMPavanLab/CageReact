@@ -1,0 +1,46 @@
+ RESP charges:
+  Type |   Atom   |    Charge
+
+  RESP       1  C     0.339748
+  RESP       2  C     0.226048
+  RESP       3  C     0.197495
+  RESP       4  C     0.192330
+  RESP       5  C    -0.071930
+  RESP       6  C    -0.055917
+  RESP       7  C    -0.054664
+  RESP       8  C    -0.005995
+  RESP       9  C    -0.004107
+  RESP      10  C     0.028835
+  RESP      11  C    -0.027532
+  RESP      12  C    -0.252766
+  RESP      13  C    -0.308980
+  RESP      14  C    -0.194333
+  RESP      15  C    -0.135295
+  RESP      16  C     0.262295
+  RESP      17  C    -0.161205
+  RESP      18  H    -0.081423
+  RESP      19  H    -0.070050
+  RESP      20  H    -0.067954
+  RESP      21  H    -0.014546
+  RESP      22  H    -0.015149
+  RESP      23  H    -0.022337
+  RESP      24  H    -0.018756
+  RESP      25  H    -0.019182
+  RESP      26  H    -0.022526
+  RESP      27  H    -0.055731
+  RESP      28  H    -0.028066
+  RESP      29  H    -0.027898
+  RESP      30  H    -0.056001
+  RESP      31  H    -0.061795
+  RESP      32  H    -0.039941
+  RESP      33  H     0.140184
+  RESP      34  H     0.168509
+  RESP      35  H     0.157047
+  RESP      36  H     0.133655
+  RESP      37  H     0.012091
+  RESP      38  H     0.000211
+  RESP      39  H     0.015631
+  Total              -0.000000
+
+  Root-mean-square (RMS) error of RESP fit:                          1.89478E-05
+  Relative root-mean-square (RRMS) error of RESP fit:                6.77411E-01
