@@ -1,0 +1,9 @@
+UNITS TIME=fs
+#
+o: GROUP ATOMS=4
+#
+water_o: GROUP ATOMS=32-510:3
+#
+c: COORDINATION GROUPA=o GROUPB=water_o R_0=0.3  
+#
+PRINT ARG=c FILE=coord_O.dat
