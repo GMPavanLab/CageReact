@@ -1,0 +1,169 @@
+&GLOBAL
+
+  PROJECT amides 
+  RUN_TYPE MD
+  PRINT_LEVEL LOW
+  WALLTIME 86400
+
+&END GLOBAL
+
+&FORCE_EVAL
+  &DFT
+  CHARGE -1
+    &QS
+      METHOD DFTB
+      &DFTB
+        SELF_CONSISTENT    T
+        DO_EWALD           T
+        DISPERSION         T
+        &PARAMETER
+          PARAM_FILE_PATH  /scratch/usr/hbcmaxdp/polito/amides/2b/INFREQUENT/DFTB/scc/
+          PARAM_FILE_NAME  scc_parameter
+          UFF_FORCE_FIELD  uff_table
+        &END PARAMETER
+      &END DFTB
+    &END QS
+    &SCF
+      SCF_GUESS CORE
+      &MIXING
+          METHOD DIRECT_P_MIXING
+          ALPHA   0.2
+      &END
+      &OT 
+        MINIMIZER DIIS
+        N_DIIS 7
+        PRECONDITIONER FULL_SINGLE_INVERSE
+      &END OT
+      MAX_SCF  150
+      EPS_SCF 1.0E-6
+      &OUTER_SCF
+        EPS_SCF 1.0E-6
+        MAX_SCF 150
+      &END OUTER_SCF
+    &END SCF
+    &POISSON
+      &EWALD
+       EWALD_TYPE SPME
+       ALPHA 0.35
+       GMAX 25
+       O_SPLINE 5
+      &END EWALD
+    &END POISSON
+  &END DFT
+ &SUBSYS
+    &CELL
+      ABC [angstrom] 17.0 17.0 17.0
+      ALPHA_BETA_GAMMA 90.000000 90.000000 90.000000
+    &END CELL
+    &TOPOLOGY
+      COORDINATE XYZ
+      COORD_FILE_NAME ./2b_cis_0_TI.xyz
+    &END TOPOLOGY
+    &KIND H
+     MASS 2.01410175
+    &END KIND
+    &COLVAR
+      &DISTANCE
+        ATOMS 83 12
+      &END DISTANCE
+    &END COLVAR
+    &COLVAR
+      &TORSION
+        ATOMS 6 5 12 13
+      &END TORSION
+    &END COLVAR 
+    &COLVAR
+       &COORDINATION
+          ATOMS_FROM  83
+          KINDS_TO   H
+          R_0 [angstrom]  1.32
+          NN  16
+          ND  56
+       &END COORDINATION
+    &END COLVAR
+    &COLVAR
+      &DISTANCE
+        ATOMS 5 12
+      &END DISTANCE
+    &END COLVAR
+ &END SUBSYS
+&END FORCE_EVAL
+
+
+&MOTION
+  &MD
+    ENSEMBLE NVT
+      &THERMOSTAT           
+       TYPE CSVR
+       REGION GLOBAL
+        &CSVR
+          TIMECON 10
+        &END CSVR        
+      &END THERMOSTAT
+    STEPS 60000
+    TIMESTEP 0.5
+    TEMPERATURE 333
+  &END MD
+  &CONSTRAINT
+    CONSTRAINT_INIT
+    &COLLECTIVE
+      COLVAR 1
+      TARGET 2.83459
+      INTERMOLECULAR
+      &RESTRAINT
+        K 0.6
+      &END RESTRAINT
+    &END COLLECTIVE
+    &COLLECTIVE
+      COLVAR 2
+      TARGET 0.0
+      INTERMOLECULAR
+      &RESTRAINT
+        K 0.6
+      &END RESTRAINT
+    &END COLLECTIVE
+    &COLLECTIVE
+      COLVAR 3
+      TARGET 1
+      INTERMOLECULAR
+      &RESTRAINT
+        K 0.6
+      &END RESTRAINT
+    &END COLLECTIVE
+    &COLLECTIVE
+      COLVAR 4
+      TARGET 2.65
+      INTERMOLECULAR
+      &RESTRAINT
+        K 0.2
+      &END RESTRAINT
+    &END COLLECTIVE
+  &END CONSTRAINT 
+  &PRINT
+   &TRAJECTORY
+     &EACH
+       MD 5
+     &END EACH
+   &END TRAJECTORY
+   &RESTART
+      &EACH
+       MD 1
+     &END EACH
+   &END RESTART
+   &VELOCITIES
+     &EACH
+       MD 5
+     &END EACH
+   &END VELOCITIES
+   &FORCES
+     &EACH
+       MD 5
+     &END EACH
+   &END FORCES
+   &RESTART_HISTORY 
+     &EACH
+       MD 500
+     &END EACH
+   &END RESTART_HISTORY
+  &END PRINT
+&END MOTION

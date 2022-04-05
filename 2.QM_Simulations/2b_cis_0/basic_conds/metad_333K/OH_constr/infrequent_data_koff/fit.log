@@ -1,0 +1,30 @@
+
+
+*******************************************************************************
+Fri Mar  5 13:16:11 2021
+
+
+FIT:    data read from 'aux.dat' u ($1):2
+        format = x:z
+        #datapoints = 31
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f0(x)
+	f0(x) = 1 - exp(-x/tau0)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   tau0         
+   0 7.1937410377e-01   0.00e+00  1.92e-01    1.000000e-07
+   4 6.5793616156e-01  -3.00e-01  1.92e-05    7.727100e-08
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.657936
+rel. change during last iteration : -3.00133e-06
+
+degrees of freedom    (FIT_NDF)                        : 30
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.148092
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0219312
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+tau0            = 7.7271e-08       +/- 1.063e-08    (13.76%)
