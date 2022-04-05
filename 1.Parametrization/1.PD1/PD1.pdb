@@ -1,0 +1,21 @@
+REMARK   1 File created by GaussView 5.0.8
+HETATM  146  N1    PD1   1      30.047  44.496  25.897                       N
+HETATM  147  C1    PD1   1      29.210  44.134  26.905                       C
+HETATM  148  C2    PD1   1      27.922  44.588  26.981                       C
+HETATM  149  C3    PD1   1      27.441  45.415  25.958                       C
+HETATM  150  C4    PD1   1      28.303  45.768  24.941                       C
+HETATM  151  C5    PD1   1      29.599  45.329  24.930                       C
+HETATM  152  H1    PD1   1      29.530  43.543  27.576                       H
+HETATM  153  H2    PD1   1      27.366  44.349  27.714                       H
+HETATM  154  H3    PD1   1      26.544  45.727  25.967                       H
+HETATM  155  H4    PD1   1      27.991  46.324  24.236                       H
+HETATM  156  C6    PD1   1      30.605  45.691  23.925                       C
+HETATM  157  C7    PD1   1      30.350  46.534  22.864                       C
+HETATM  158  C8    PD1   1      31.365  46.844  21.979                       C
+HETATM  159  C9    PD1   1      32.616  46.317  22.209                       C
+HETATM  160  C10   PD1   1      32.809  45.489  23.293                       C
+HETATM  161  N2    PD1   1      31.819  45.161  24.117                       N
+HETATM  162  H5    PD1   1      29.482  46.899  22.739                       H
+HETATM  163  H6    PD1   1      31.205  47.408  21.231                       H
+HETATM  164  H7    PD1   1      33.339  46.521  21.629                       H
+HETATM  165  H8    PD1   1      33.676  45.138  23.456                       H
