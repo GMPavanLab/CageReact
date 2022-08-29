@@ -1,0 +1,8 @@
+omega: TORSION ATOMS=13,12,5,6
+psi: TORSION ATOMS=1,13,12,4
+# #
+#
+metad: METAD ARG=psi PACE=5000 HEIGHT=1.2 SIGMA=0.23 FILE=HILLS BIASFACTOR=9 TEMP=300.0 GRID_MIN=-pi GRID_MAX=pi ACCELERATION
+# # monitor the two variables and the metadynamics bias potential
+PRINT STRIDE=100 ARG=omega,psi,metad.* FILE=COLVAR
+

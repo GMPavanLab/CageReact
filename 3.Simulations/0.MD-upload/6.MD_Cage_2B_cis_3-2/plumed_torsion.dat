@@ -1,0 +1,6 @@
+# lato zolfo
+d1: TORSION ATOMS=295,307,306,299
+#lato fenile
+d2: TORSION ATOMS=306,299,300,301
+
+PRINT ARG=d1,d2 FILE=res_torsion.dat STRIDE=1

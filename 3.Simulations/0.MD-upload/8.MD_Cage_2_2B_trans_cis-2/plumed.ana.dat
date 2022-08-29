@@ -1,0 +1,10 @@
+phi: TORSION ATOMS=301,300,299,306
+psi: TORSION ATOMS=295,307,306,298
+omega: TORSION ATOMS=307,306,299,300
+
+# #
+# 
+# # monitor the two variables and the metadynamics bias potential
+PRINT STRIDE=1 ARG=phi,omega,psi FILE=results.ana.dat
+
+
